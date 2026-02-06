@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Will You Be My Valentine 💖</title>
+  <title>For My Papu 💖</title>
 
   <style>
     body {
@@ -12,29 +12,35 @@
       justify-content: center;
       align-items: center;
       background: linear-gradient(to right, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     .card {
       background: white;
       padding: 25px;
-      border-radius: 20px;
+      border-radius: 22px;
       text-align: center;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-      width: 320px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      width: 340px;
       position: relative;
     }
 
-    /* PIC */
-    .card img {
+    img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 18px;
       margin-bottom: 15px;
     }
 
     h1 {
       color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    .story {
+      font-size: 14px;
+      color: #555;
       margin-bottom: 20px;
+      line-height: 1.4;
     }
 
     .buttons {
@@ -44,7 +50,7 @@
     }
 
     button {
-      padding: 12px 20px;
+      padding: 12px 22px;
       border: none;
       border-radius: 25px;
       font-size: 16px;
@@ -66,26 +72,52 @@
 <body>
 
   <div class="card">
-    <!-- TOGETHER PIC -->
-    <img src="couple.jpg" alt="Us together 💕">
+    <!-- YOUR TOGETHER PIC -->
+    <img src="couple.jpg" alt="Us 💕">
 
-    <h1>Will you be my Valentine? 💖</h1>
+    <h1>Papu 💖</h1>
+
+    <div class="story">
+      From school days to today,<br>
+      we have completed <b>9 beautiful years</b> together 🥺❤️<br><br>
+      Through everything, you are still my favorite person.
+    </div>
+
+    <h2>Will you be my Valentine papuuu? 💌</h2>
 
     <div class="buttons">
       <button class="yes" onclick="yesClicked()">YES 💘</button>
-      <button class="no" onmouseover="moveNo()">NO 😭</button>
+      <button class="no" onmouseover="moveNo()">NO 😜</button>
     </div>
   </div>
 
   <script>
     function moveNo() {
       const noBtn = document.querySelector('.no');
-      noBtn.style.left = Math.random() * 250 + "px";
-      noBtn.style.top = Math.random() * 150 + "px";
+      noBtn.style.left = Math.random() * 260 + "px";
+      noBtn.style.top = Math.random() * 180 + "px";
     }
 
     function yesClicked() {
-      alert("Yayyy! I love you ❤️🥰");
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:linear-gradient(to right,#ff9a9e,#fad0c4);
+          font-family:'Segoe UI',sans-serif;
+          text-align:center;
+          color:#fff;
+          padding:20px;
+        ">
+          <div>
+            <h1>I Love You Papu ❤️🥰</h1>
+            <p>9 years down, forever to go 💕<br>
+            Happy Valentine’s Day 💖</p>
+          </div>
+        </div>
+      `;
     }
   </script>
 
